@@ -1,0 +1,1 @@
+gcc -o first_test1.out first_test1.c -fopenmp

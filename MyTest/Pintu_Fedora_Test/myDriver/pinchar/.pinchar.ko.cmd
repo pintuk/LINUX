@@ -1,0 +1,1 @@
+cmd_/home/PINTU/myDriver/pinchar/pinchar.ko := ld -m elf_i386 -m elf_i386 -r -o /home/PINTU/myDriver/pinchar/pinchar.ko /home/PINTU/myDriver/pinchar/pinchar.o /home/PINTU/myDriver/pinchar/pinchar.mod.o

@@ -1,0 +1,12 @@
+gcc -fPIC -g -c -Wall library1.c
+gcc -fPIC -g -c -Wall library2.c
+gcc -shared -Wl,-soname,liblibrary1.so -o liblibrary1.so library1.o
+gcc -shared -Wl,-soname,liblibrary2.so -o liblibrary2.so library2.o
+gcc -o MainFile.out MainFile.c -llibrary1 -I./
+gcc -o MainFile.out MainFile.c AnotherFile1.c AnotherFile2.c -llibrary1 -llibrary2 -lpthread -I./
+gcc -fPIC -g -c -Wall AnotherFile1.c ; gcc -fPIC -g -c -Wall AnotherFile2.c
+gcc -shared -Wl,-soname,libAnotherFile1.so -o libAnotherFile1.so AnotherFile1.o -Wall -fPIC
+gcc -shared -Wl,-soname,libAnotherFile2.so -o libAnotherFile2.so AnotherFile2.o -Wall -fPIC
+gcc -o MainFile.out MainFile.c -lAnotherFile1 -lAnotherFile2 -lpthread -I./ -Wall -g
+gcc -shared -Wl,-soname,libAnotherFile1.so -o libAnotherFile1.so AnotherFile1.o -Wall -fPIC -llibrary1
+gcc -shared -Wl,-soname,libAnotherFile2.so -o libAnotherFile2.so AnotherFile2.o -Wall -fPIC -llibrary2

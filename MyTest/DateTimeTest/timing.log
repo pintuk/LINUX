@@ -1,0 +1,6 @@
+09-22 19:27:50.489+0530 D/AUL_AMD (  576): amd_launch.c: __amd_send_message_to_e17(1503) > [LAUNCHING EFFECT]: message type(2), screen mode(0), effect type(-1), theme(0), indicator show
+09-22 19:27:50.489+0530 D/LAUNCH  ( 5565): appcore-efl.c: __do_app(629) > [contacts:Application:reset:start]
+09-22 19:27:50.499+0530 D/LAUNCH  ( 5565): appcore-efl.c: __do_app(642) > [contacts:Application:reset:done]
+09-22 19:27:50.719+0530 D/LAUNCH  ( 5565): appcore-efl.c: __do_app(701) > [contacts:Application:resume:start]
+09-22 19:27:50.719+0530 D/LAUNCH  ( 5565): appcore-efl.c: __do_app(738) > [contacts:Application:resume:done]
+09-22 19:27:51.059+0530 D/LAUNCH  (  576): amd_launch.c: __e17_status_handler(3116) > [contacts:Application:Launching:done]

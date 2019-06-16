@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+
+
+
+unsigned int bitinvert(unsigned int x, int p, int n)
+{
+	unsigned int y = 0x00;
+
+	y = x ^ ( ~(~0 << n) ) << ((p-n)+1);   //invert 1 to 0 and 0 to 1 for p-n bits 
+
+	return(y);
+}
+
+
+main()
+{
+	unsigned int x = 0xA1B2; //0x3973;
+	unsigned int num = 0x00;
+
+	printf("X = 0x%x\n",x);
+
+	num = bitinvert(x,11,1);
+	printf("Number = 0x%x\n",num);
+
+}
+
+
+

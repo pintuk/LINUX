@@ -1,0 +1,23 @@
+	if(bOneShot)
+	{
+		tSpec.it_value.tv_sec = sec;
+		tSpec.it_value.tv_nsec = msec * 1000000;
+		tSpec.it_interval.tv_sec = 0;
+		tSpec.it_interval.tv_nsec = 0;
+	}
+	else
+	{
+		tSpec.it_value.tv_sec = sec;
+		tSpec.it_value.tv_nsec = msec * 1000000;
+		tSpec.it_interval.tv_sec = tSpec.it_value.tv_sec;
+		tSpec.it_interval.tv_nsec = tSpec.it_value.tv_nsec;
+	}
+	
+	if(timer_settime(timer, 0, &tSpec, NULL) != 0)
+	{
+		fprintf(stderr, "timer_settime - failed !, Error = %s\n",strerror(errno));
+		if (timer_delete(timer) == 0)
+		{
+			fprintf(stderr, "timer_delete - failed !, Error = %s\n",strerror(errno));
+		}
+		return EnMM_Failure;

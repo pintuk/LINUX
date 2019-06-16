@@ -1,0 +1,2 @@
+gcc -o msguser1.out msguser1.c ipcmsgq.c -I.
+gcc -o msguser2.out msguser2.c ipcmsgq.c -I.

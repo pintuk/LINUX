@@ -1,0 +1,2 @@
+gcc -o vtmain.out vtmain.c IPCMsgQ.c VTTask.c -I./ -lpthread -pthread -g
+gcc -o vtui.out vtui.c IPCMsgQ.c VTTask.c -I./ -lpthread -pthread -g
